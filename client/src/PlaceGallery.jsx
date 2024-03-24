@@ -35,7 +35,13 @@ export default function PlaceGallery({ place }) {
           {place?.photos?.length > 0 &&
             place.photos.map((photo) => (
               <div>
-                <img src={"http://localhost:5000/uploads/" + photo} alt="" />
+                <img
+                  src={
+                    "https://booking-website-server-v60j.onrender.com/uploads/" +
+                    photo
+                  }
+                  alt=""
+                />
               </div>
             ))}
         </div>
@@ -52,7 +58,10 @@ export default function PlaceGallery({ place }) {
                 <img
                   onClick={() => setshowAllPhotos(true)}
                   className=""
-                  src={"http://localhost:5000/uploads/" + place.photos[0]}
+                  src={
+                    "https://booking-website-server-v60j.onrender.com/uploads/" +
+                    place.photos[0]
+                  }
                   alt=""
                 />
               </div>
@@ -64,7 +73,10 @@ export default function PlaceGallery({ place }) {
                 onClick={() => setshowAllPhotos(true)}
                 aspect-square
                 object-cover
-                src={"http://localhost:5000/uploads/" + place.photos[1]}
+                src={
+                  "https://booking-website-server-v60j.onrender.com/uploads/" +
+                  place.photos[1]
+                }
                 alt=""
               />
             )}
@@ -76,7 +88,10 @@ export default function PlaceGallery({ place }) {
                   object-cover
                   relative
                   top-2
-                  src={"http://localhost:5000/uploads/" + place.photos[2]}
+                  src={
+                    "https://booking-website-server-v60j.onrender.com/uploads/" +
+                    place.photos[2]
+                  }
                   alt=""
                 />
               </div>

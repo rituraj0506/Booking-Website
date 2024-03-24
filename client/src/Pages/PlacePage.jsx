@@ -4,6 +4,7 @@ import PlaceGallery from "../PlaceGallery";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import AddressLink from "../AddressLink";
+
 export default function PlacePage() {
   const { id } = useParams();
   const [place, setPlace] = useState(null);

@@ -12,12 +12,15 @@ export default function Indexpage() {
     <div className="mt-8 grid gap-x-6 gap-y-7 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {places.length > 0 &&
         places.map((place) => (
-          <Link to={"/place/" + place._id}>
+          <Link to={"/place/" + place._id} id={place._id}>
             <div className="bg-gray-500 mb-2 rounded-2xl flex">
               {place.photos?.[0] && (
                 <img
                   className="rounded-2xl object-cover aspect-square"
-                  src={"http://localhost:5000/uploads/" + place.photos?.[0]}
+                  src={
+                    "https://booking-website-server-v60j.onrender.com/uploads/" +
+                    place.photos?.[0]
+                  }
                   alt=""
                 />
               )}
@@ -51,3 +54,4 @@ export default function Indexpage() {
     </div>
   );
 }
+

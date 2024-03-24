@@ -4,7 +4,10 @@ export default function PlaceImg({ place, index = 0, className = null }) {
   return (
     <img
       className={className}
-      src={"http://localhost:5000/uploads/" + place.photos[index]}
+      src={
+        "https://booking-website-server-v60j.onrender.com/uploads/" +
+        place.photos[index]
+      }
       alt=""
     />
   );
